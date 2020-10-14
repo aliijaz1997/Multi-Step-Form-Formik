@@ -1,0 +1,33 @@
+/* .div {
+   margin: 65px 250px 0px;
+   padding: 5px;
+} */
+
+.background {
+    background-image: linear-gradient(rgb(255, 250, 250), rgb(243, 114, 174));
+  /* background-repeat: no-repeat; */
+  margin: -22px 0px;
+  width: auto;
+  height: 1000px;
+}
+.heading {
+    text-align: center;
+    color: rgb(31, 57, 112);
+}
+  @media only screen and (min-width: 600px) {
+    .div {
+        margin: 65px 250px 0px;
+        padding: 5px;
+     }
+     .Error {
+         color: red;
+         font-size: small;
+         margin-bottom: -50px;
+     }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .div {
+        margin: 65px 250px 0px;
+        padding: 5px;}
+  }
