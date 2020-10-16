@@ -1,4 +1,4 @@
-import { Step, StepLabel, Stepper } from '@material-ui/core';
+import { Button, Step, StepLabel, Stepper } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Form2, Form1, Form3 } from './components/forms';
 import "./components/forms.css";
@@ -25,9 +25,6 @@ const steplabel = () => {
 export default function App() {
   // Material ui
   const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-    checkedF: true,
     checkedG: true,
   });
 
@@ -57,6 +54,11 @@ export default function App() {
     console.log("clicking next");
 
   }
+
+
+  const resetsteps = () => {
+    setCurrentStep(0);
+  }
   return (
     <div className="background">
       <h1 className="heading">Multi-Step Form</h1>
@@ -69,13 +71,25 @@ export default function App() {
           // )
         ))}
       </Stepper>
-      <div>
-        {getcontentofstep(currentStep, gettonextstep)}
-      </div>
-      <FormControlLabel
-        control={<GreenCheckbox checked={state.checkedG} onChange={handleChange} name="checkedG" />}
-        label="Custom color"
-      />
+      { currentStep === 2 ?
+            <><div>
+          {getcontentofstep(currentStep, gettonextstep)}
+        </div>
+       <div className = 'form3buttons'>
+       <FormControlLabel
+            control={<GreenCheckbox checked = {state.checkedG} onChange={handleChange} name="checkedG" />}
+            label="I hereby confirm that the given information is correct" />
+            <br/>
+        <Button variant="contained" type="submit" onClick = {resetsteps} color="primary" disabled={state.checkedG === false}>
+                        Finish and Reset
+          </Button>
+          </div>
+          </> 
+      :   
+          <div>
+      {getcontentofstep(currentStep, gettonextstep)}
+    </div>
+    }
     </div>
   )
 }

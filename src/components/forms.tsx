@@ -166,8 +166,8 @@ export const Form2: React.FC<props> = ({ handlenext }) => {
         validationSchema={yup.object({
           collegename: yup.string().required('Required'),
           degreename: yup.string().required('Required'),
-          marksscored: yup.number().integer().min(13, 'Type 13 digit').required('Required').positive('Type positive number'),
-          yearofcompletion: yup.number().integer().min(13, 'Type 13 digit').required('Required').positive('Type positive number')
+          marksscored: yup.number().required('Required'),
+          yearofcompletion: yup.number().required('Required')
         })}
         onSubmit={(values) => {
           console.log(values)
@@ -205,10 +205,10 @@ export const Form2: React.FC<props> = ({ handlenext }) => {
           </div>
           <br />
           <div className = "buttonform2">
-          <Button  variant="contained" type="submit" color="primary" disableElevation>
+          <Button variant="contained" type="submit" color="primary" disableElevation>
             Next Section
-         </Button>
-         </div>
+           </Button>
+           </div>
         </Form>
         {/* {/* </div> */}
       </Formik>
@@ -252,7 +252,7 @@ export const Form3: React.FC<props> = ({ handlenext }) => {
           </span>
           </div>
           <div  className = "genderinfo">
-          <FormLabel color = "primary" component="legend">Gender</FormLabel>
+        <FormLabel style = {{fontSize : "30px", color : 'yellow'}} color = "primary" component="legend">Gender</FormLabel>
           <RadioGroup defaultValue="female" aria-label="gender" name="gender">
             <FormControlLabel value="female" control={<StyledRadio />} label="Female" />
             <FormControlLabel value="male" control={<StyledRadio />} label="Male" />

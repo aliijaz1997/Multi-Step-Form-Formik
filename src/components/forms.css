@@ -5,7 +5,7 @@
   /* background-repeat: no-repeat; */
   margin: -22px 0px;
   width: auto;
-  height: 1200px;
+  height: 1800px;
   align-content: center;
 }
 .heading {
@@ -34,6 +34,19 @@
     }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 320px) {
+    .div {
+        margin: 65px 0px 0px;
+        padding: 5px;}
+        .Error {
+            color: rgb(246, 245, 235);  
+            font-size: small;
+            margin-bottom: -50px;
+        }
+        .buttonform {
+            margin-top: 10px;
+        }
+}
 @media only screen and (min-width: 600px) {
     .div {
         margin: 65px 530px 0px;
@@ -361,11 +374,67 @@
         display: inline-flex;
         padding: 100px;
         justify-content: space-between;
-        margin: 10px 100px 5px;
+        margin: 10px 0px 5px;
     }
     .genderinfo {
         color: rgb(255, 196, 0);
         padding: 30px;
         margin-left: 170px;
+    }
+    .form3buttons {
+        display: inline-flex;
+        padding: 10px;
+        justify-content: center;
+        margin-left: 00px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .column1ofform3 {
+        display: inline-flex;
+        padding: 100px;
+        justify-content: space-between;
+        margin: 10px -90px 5px;
+    }
+    .genderinfo {
+        color: rgb(255, 196, 0);
+        padding: 30px;
+        margin-left: 170px;
+    }
+    .form3buttons {
+        display: inline-flex;
+        padding: 10px;
+        justify-content: center;
+        margin-left: 400px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .column1ofform3 {
+        justify-content: space-between;
+        margin: 10px -90px 5px;
+    }
+    .genderinfo {
+        color: rgb(255, 196, 0);
+        padding: 30px;
+        margin-left: 0px;
+    }
+    .form3buttons {
+        justify-content: center;
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 320px) {
+    .column1ofform3 {
+        justify-content: space-between;
+        margin: 15px -20px;
+    }
+    .genderinfo {
+        color: rgb(255, 196, 0);
+        padding: 30px;
+    }
+    .form3buttons {
+        /* display: inline-flex; */
+        justify-content: center;
+        margin-left: 0px;
     }
 }
