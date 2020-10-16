@@ -56,24 +56,6 @@ const useStyles = makeStyles({
   },
 });
 
-const useStyles1 = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      '& > *': {
-        margin: theme.spacing(1),
-        width: theme.spacing(16),
-        height: theme.spacing(16),
-      },
-      paper: {
-        maxWidth: 400,
-        margin: `${theme.spacing(1)}px auto`,
-        padding: theme.spacing(2),
-      },
-    },
-  }),
-);
 function StyledRadio(props: RadioProps) {
   const classes = useStyles();
 
