@@ -1,8 +1,7 @@
 import React from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import { Button, Paper } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import * as yup from 'yup';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
@@ -11,7 +10,6 @@ import clsx from 'clsx';
 import Radio, { RadioProps } from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 interface props {
   handlenext: () => void;
@@ -93,7 +91,7 @@ function StyledRadio(props: RadioProps) {
 
 export const Form1: React.FC<props> = ({ handlenext }) => {
   const classes = useStyles();
-  const classes1 = useStyles1();
+  // const classes1 = useStyles1();
   return (
     <div  className="div"  >
       <Formik
